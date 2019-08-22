@@ -1,14 +1,23 @@
 import React, {Component} from 'react';
-// import DashboardSidebar from '../DasboardSidebar';
-import { Segment } from 'semantic-ui-react';
-import CarData from '../../Components/CarData';
+import LastFillUpData from '../../Components/LastFillUp';
+import FuelLeftData from '../../Components/FuelLeft';
+import DiagnosticIssuesData from '../../Components/DiagnosticIssues';
+import BusinessTravelData from '../../Components/BusinessTravel';
+import {Card} from 'semantic-ui-react';
 class Dashboard extends Component {
     render() {
         return (
+            <div className="ui container">
             <>
-            <h1>Dashboard</h1>
-            <CarData></CarData>
+            
+            <Card.Group>
+            <LastFillUpData/>
+              <FuelLeftData/>
+              <DiagnosticIssuesData/>
+              <BusinessTravelData/>
+            </Card.Group>
             </>
+            </div>
         )
     }
 };

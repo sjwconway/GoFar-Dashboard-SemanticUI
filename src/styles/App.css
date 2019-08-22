@@ -1,0 +1,17 @@
+.data-cards-r1 {
+    max-width: 20vw;
+    margin-top: 5rem;
+}
+
+body {
+    background-color: #d4d6d9;
+}
+
+.ui.cards {
+    justify-content: space-evenly;
+}
+
+.ui.container {
+    margin: 0 !important;
+    width: 100%
+}
