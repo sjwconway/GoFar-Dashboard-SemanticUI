@@ -42,4 +42,7 @@ body {
     justify-content: space-evenly;
 }
 
+.container-bg {
+    background-color: white;
+}
 
