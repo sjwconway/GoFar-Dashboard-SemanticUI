@@ -46,3 +46,8 @@ body {
     background-color: white;
 }
 
+/******** LOGINPAGE STYLES *********/
+
+.bg-image {
+    background-image: url('https://unsplash.com/photos/nKg8IsVFMV8');
+}

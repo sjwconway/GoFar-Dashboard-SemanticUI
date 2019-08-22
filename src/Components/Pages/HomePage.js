@@ -1,8 +1,9 @@
 import React from 'react';
+import DashboardSidebar from '../DashboardSidebar';
 
 const HomePage = () => {
     return (
-        <h1>root</h1>
+        <DashboardSidebar/>
     )
 }
 

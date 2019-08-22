@@ -1,8 +1,13 @@
 import React from 'react'
-import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
+import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react';
+
+
+
+const bgImage = 'https://unsplash.com/photos/nKg8IsVFMV8';
 
 const LoginForm = () => (
-  <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
+<div className="bg-image">
+  <Grid textAlign='center' style={{ height: '100vh', backgroundImage: `url(${bgImage})`}} verticalAlign='middle'>
     <Grid.Column style={{ maxWidth: 450 }}>
       <Header as='h2' color='teal' textAlign='center'>
         <Image src='/logo.png' /> GoFar Login
@@ -28,6 +33,7 @@ const LoginForm = () => (
       </Message>
     </Grid.Column>
   </Grid>
+</div>
 )
 
 export default LoginForm;
