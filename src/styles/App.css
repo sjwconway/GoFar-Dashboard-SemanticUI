@@ -4,14 +4,24 @@
 }
 
 body {
-    background-color: #d4d6d9;
+    background-color: #e1e4e8;
 }
 
 .ui.cards {
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .ui.container {
     margin: 0 !important;
-    width: 100%
+    width: 100%;
+    margin-top: 2vh !important; 
+    
+}
+
+.ui.cards>.card {
+    margin: 0.5em 1em;
+}
+
+.ui.card, .ui.cards>.card {
+    width: 20vw;
 }
