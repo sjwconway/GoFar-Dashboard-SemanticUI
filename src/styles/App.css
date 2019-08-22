@@ -25,3 +25,21 @@ body {
 .ui.card, .ui.cards>.card {
     width: 20vw;
 }
+
+.ui.placeholder.segment {
+    flex-direction: inherit;
+    justify-content: normal;
+    min-height: 22rem;
+    margin: 4vh 5.5vw 4vh 5.5vw;
+}
+
+ .three-cards {
+    width: 30vw;
+}
+
+.three-cards-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
