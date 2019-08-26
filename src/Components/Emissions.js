@@ -8,13 +8,11 @@ const EmissionsData = () => {
         
         <Card  className="data-cards-r1" >
             <Card.Content>
-            <Icon name="motorcycle" size="huge"/>
-            <Card.Header>EMISSIONS</Card.Header>
-            <Card.Content extra>
-            <hr></hr>
-                <p>74 KG C02</p>
-                
-            </Card.Content>
+            <Icon circular inverted color="green" name="tree" size="big"/>
+            <div className="data-content">
+            <p>EMISSIONS</p>    
+            <h2>74KG C02</h2>
+            </div>
             </Card.Content>
         </Card>
         

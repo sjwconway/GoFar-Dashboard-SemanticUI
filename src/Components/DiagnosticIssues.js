@@ -8,11 +8,13 @@ const DiagnosticIssuesData = () => {
         
         <Card  className="data-cards-r1" >
             <Card.Content>
-            <Icon name="motorcycle" size="huge"/>
-            <Card.Header>Diagnostic Issues</Card.Header>
+            <Icon circular inverted color="red" name="wrench" size="big"/>
+            <div className="data-content">
+                <p>Diagnostic Issues    </p>
+                <h2>Power Steering</h2>
+            </div>
             <Card.Content extra>
             <hr></hr>
-                <p>Power Steering</p>
                 <a>See a mechanic</a>
             </Card.Content>
             </Card.Content>

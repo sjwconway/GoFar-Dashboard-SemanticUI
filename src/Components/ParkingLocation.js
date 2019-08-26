@@ -4,7 +4,7 @@ import { Button, Header, Icon, Segment } from 'semantic-ui-react'
 const ParkingLocationData = () => (
   <Segment placeholder>
     <Header icon>
-      <Icon name='map marker alternate' />
+      <Icon  color="red" name="map marker alternate" size="big" />
       Parking Location
     </Header>
     

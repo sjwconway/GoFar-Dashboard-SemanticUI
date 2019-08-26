@@ -8,10 +8,13 @@ const TotalDistanceData = () => {
         
         <Card  className="data-cards-r1" >
             <Card.Content>
-            <Icon name="motorcycle" size="huge"/>
-            <Card.Header>34000km 4000km</Card.Header>
+            <Icon circular inverted color="brown" name="road" size="big"/>
+            <div className="data-content">
+            <p>Total Distance</p>
+            <h2>34000 km</h2>
+            <h2>4000 km</h2>
+            </div>
             <Card.Content extra>
-            <hr></hr>
                 <p>34000km (Total)</p>
                 <p>4000km (This Year)</p>
             </Card.Content>

@@ -1,80 +1,69 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, { Component,} from 'react'
+import {Link} from 'react-router-dom';
+import CarDropDown from './Dropdown';
+import Dashboard from '../../src/Components/Pages/Dashboard';
 import {
   Button,
-  Checkbox,
-  Grid,
   Header,
   Icon,
   Image,
   Menu,
   Segment,
   Sidebar,
-  HorizontalSidebar
-} from 'semantic-ui-react';
+} from 'semantic-ui-react'
 
 export default class DashboardSidebar extends Component {
-  state = {
-    animation: 'overlay',
-    direction: 'left',
-    dimmed: false,
-    visible: false,
-  }
+  state = { visible: false,
+            icon: 'arrow alternate circle right' }
 
-  handleAnimationChange = animation => () =>
-    this.setState(prevState => ({ animation, visible: !prevState.visible }))
-
-  handleDimmedChange = (e, { checked }) => this.setState({ dimmed: checked })
-
-  handleDirectionChange = direction => () => this.setState({ direction, visible: false })
+  handleHideClick = () => this.setState({ visible: false,})
+  handleShowClick = () => this.setState({ visible: true, icon: '' })
+  handleSidebarHide = () => this.setState({ visible: false, icon: 'arrow alternate circle right'})
 
   render() {
-    const { animation, dimmed, direction, visible } = this.state
-    const vertical = direction === 'bottom' || direction === 'top'
-
+    const { visible, icon } = this.state  
     return (
       <div>
-        <Checkbox checked={dimmed} label='Dim Page' onChange={this.handleDimmedChange} toggle />
-
-        <Header as='h5'>Direction</Header>
-        <Button.Group>
-          <Button active={direction === 'left'} onClick={this.handleDirectionChange('left')}>
-            Left
-          </Button>
-          <Button active={direction === 'right'} onClick={this.handleDirectionChange('right')}>
-            Right
-          </Button>
-          <Button active={direction === 'top'} onClick={this.handleDirectionChange('top')}>
-            Top
-          </Button>
-          <Button active={direction === 'bottom'} onClick={this.handleDirectionChange('bottom')}>
-            Bottom
-          </Button>
-        </Button.Group>
-
-        <Header as='h5'>All Direction Animations</Header>
-        <Button onClick={this.handleAnimationChange('overlay')}>Overlay</Button>
-        <Button onClick={this.handleAnimationChange('push')}>Push</Button>
-        <Button onClick={this.handleAnimationChange('scale down')}>Scale Down</Button>
-
-        <Header as='h5'>Vertical-Only Animations</Header>
-        <Button disabled={vertical} onClick={this.handleAnimationChange('uncover')}>
-          Uncover
+        
+        <Button disabled={visible} onClick={this.handleShowClick}>
+        <Icon name={icon} size='big'/>
         </Button>
-        <Button disabled={vertical} onClick={this.handleAnimationChange('slide along')}>
-          Slide Along
-        </Button>
-        <Button disabled={vertical} onClick={this.handleAnimationChange('slide out')}>
-          Slide Out
-        </Button>
+
 
         <Sidebar.Pushable as={Segment}>
-            <DashboardSidebar/> animation={animation} direction={direction} visible={visible} />
-          <Sidebar.Pusher dimmed={dimmed && visible}>
-            <Segment basic>
-              <Header as='h3'>Application Content</Header>
-              <Image src='/images/wireframe/paragraph.png' />
-            </Segment>
+          <Sidebar
+            as={Menu}
+            animation='overlay'
+            icon='labeled'
+            inverted
+            onHide={this.handleSidebarHide}
+            vertical
+            visible={visible}
+            width='thin'
+          >
+            <Menu.Item as='a'>
+             
+              <Link to="/login">
+              <Icon name='home' />
+              Home
+              </Link>
+            </Menu.Item>
+            <Menu.Item as='a'>
+              <Icon name='car' size='massive' />
+              Cars
+              <CarDropDown/>
+              <Button>Show Data</Button>
+            </Menu.Item>
+            <Menu.Item as='a'>
+              <Link to="/login">
+              <Icon name='log out' />
+              Logout
+              </Link>
+            </Menu.Item>
+          </Sidebar>
+
+          <Sidebar.Pusher dimmed={visible}>
+              <Dashboard />
           </Sidebar.Pusher>
         </Sidebar.Pushable>
       </div>
