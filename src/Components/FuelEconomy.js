@@ -14,7 +14,6 @@ const FuelEconomyData = () => {
             <h2>12/100km</h2>
             </div>
             <Card.Content extra>
-           
             </Card.Content>
             </Card.Content>
         </Card>

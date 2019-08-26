@@ -72,3 +72,12 @@ body {
 .bg-image {
     background-image: url('https://unsplash.com/photos/nKg8IsVFMV8');
 }
+
+/******* SIDEBAR STYLES *******/
+.pushable>.pusher {
+    background-color: #e1e4e8;
+}
+
+.ui.thin.left.sidebar {
+    width: 300px;
+}

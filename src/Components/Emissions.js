@@ -10,7 +10,7 @@ const EmissionsData = () => {
             <Card.Content>
             <Icon circular inverted color="green" name="tree" size="big"/>
             <div className="data-content">
-            <p>EMISSIONS</p>
+            <p>EMISSIONS</p>    
             <h2>74KG C02</h2>
             </div>
             </Card.Content>
