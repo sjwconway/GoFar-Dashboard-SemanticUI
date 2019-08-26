@@ -28,7 +28,7 @@ body {
 }
 
 .ui.container {
-    margin: 0 !important;
+    margin: 0 auto !important;
     width: 100%;
     margin-top: 2vh !important; 
     
@@ -60,6 +60,9 @@ body {
 
 .container-bg {
     background-color: white;
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 2vh;
 }
 
 .card-data-text {

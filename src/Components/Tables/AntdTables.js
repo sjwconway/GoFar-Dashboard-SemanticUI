@@ -188,7 +188,7 @@ class AntdTables extends React.Component {
 
     ];
     return (
-      <div className="ui container container-bg">
+      <div className= "container-bg">
         <Table columns={columns} dataSource={data} onChange={this.handleChange} />
       </div>
     );
