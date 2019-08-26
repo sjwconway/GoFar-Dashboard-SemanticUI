@@ -1,6 +1,22 @@
-.data-cards-r1 {
-    max-width: 20vw;
-    margin-top: 5rem;
+.data-content h3 {
+    margin: 0 auto;
+}
+h2 {
+    font-weight: 100;
+}
+.data-content h2 {
+    margin: 0 auto;
+    
+}
+
+.data-content {
+    display: inline-block;
+    float: right;
+}
+
+.data-content p {
+    color: gray;
+    float: right;   
 }
 
 body {
@@ -44,6 +60,11 @@ body {
 
 .container-bg {
     background-color: white;
+}
+
+.card-data-text {
+    font-size: 2rem;
+    text-align: right;
 }
 
 /******** LOGINPAGE STYLES *********/

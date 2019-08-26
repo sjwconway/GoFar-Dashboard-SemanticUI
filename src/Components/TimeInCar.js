@@ -8,12 +8,12 @@ const TimeInCarData = () => {
         
         <Card  className="data-cards-r1" >
             <Card.Content>
-            <Icon name="motorcycle" size="huge"/>
-            <Card.Header>Time in Car (This Year) </Card.Header>
+            <Icon circular inverted color="grey" name="car" size="big"/>
+            <div className="data-content">
+            <p>Time in Car (this year)</p>
+            <h2>120 Hours</h2>
+            </div>
             <Card.Content extra>
-            <hr></hr>
-                <p>120 hours</p>
-                
             </Card.Content>
             </Card.Content>
         </Card>

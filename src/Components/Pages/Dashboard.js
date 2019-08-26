@@ -39,7 +39,7 @@ class Dashboard extends Component {
               <FuelEconomyData/>    
             </Card.Group>
             </div>
-            <AntdTable/>
+            <AntdTable/> 
         </>
         )
     }

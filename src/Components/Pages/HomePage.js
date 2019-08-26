@@ -1,9 +1,9 @@
 import React from 'react';
-import DashboardSidebar from '../DashboardSidebar';
+// import DashboardSidebar from '../DashboardSidebar';
 
 const HomePage = () => {
     return (
-        <DashboardSidebar/>
+        <div>Home</div>
     )
 }
 

@@ -8,12 +8,13 @@ const FuelEconomyData = () => {
         
         <Card  className="data-cards-r1" >
             <Card.Content>
-            <Icon name="motorcycle" size="huge"/>
-            <Card.Header>Fuel Economy </Card.Header>
+            <Icon circular inverted color="violet" name="dollar sign" size="big"/>
+            <div className="data-content">
+            <p>Fuel Economy</p>
+            <h2>12/100km</h2>
+            </div>
             <Card.Content extra>
-            <hr></hr>
-                <p>12L/100km</p>
-                
+           
             </Card.Content>
             </Card.Content>
         </Card>

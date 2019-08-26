@@ -8,11 +8,13 @@ const FuelLeftData = () => {
         
         <Card  className="data-cards-r1" >
             <Card.Content>
-            <Icon name="motorcycle" size="huge"/>
-            <Card.Header>Estimated Fuel Left</Card.Header>
+            <Icon circular inverted color="orange" name="tachometer alternate" size="big"/>
+            <div className="data-content">
+                <p>Esitmated Fuel Left:</p>
+                <h2>58 km</h2>
+            </div>
             <Card.Content extra>
             <hr></hr>
-                <p>58 km</p>
                 <p>200km(since last fill up)</p>
             </Card.Content>
             </Card.Content>
