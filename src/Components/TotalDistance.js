@@ -15,7 +15,6 @@ const TotalDistanceData = () => {
             <h2>4000 km</h2>
             </div>
             <Card.Content extra>
-            <hr></hr>
                 <p>34000km (Total)</p>
                 <p>4000km (This Year)</p>
             </Card.Content>
