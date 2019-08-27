@@ -16,9 +16,10 @@ export default class DashboardSidebar extends Component {
   state = { visible: false,
             icon: 'arrow alternate circle right' }
 
-  handleHideClick = () => this.setState({ visible: false,})
+  handleHideClick = () => this.setState({ visible: false})
   handleShowClick = () => this.setState({ visible: true, icon: '' })
   handleSidebarHide = () => this.setState({ visible: false, icon: 'arrow alternate circle right'})
+  DisplayCarData = () => this.setState({visible: false})
 
   render() {
     const { visible, icon } = this.state  
@@ -42,17 +43,16 @@ export default class DashboardSidebar extends Component {
             width='thin'
           >
             <Menu.Item as='a'>
-             
               <Link to="/login">
               <Icon name='home' />
               Home
               </Link>
             </Menu.Item>
-            <Menu.Item as='a'>
+            <Menu.Item>
               <Icon name='car' size='massive' />
               Cars
               <CarDropDown/>
-              <Button>Show Data</Button>
+              <Button onClick={this.DisplayCarData} className="ui inverted primary basic button">Show Data</Button>
             </Menu.Item>
             <Menu.Item as='a'>
               <Link to="/login">

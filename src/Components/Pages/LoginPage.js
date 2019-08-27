@@ -1,39 +1,20 @@
 import React from 'react'
-import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react';
+import { Button, Form, Grid, Header, Image, Message, Segment, Container } from 'semantic-ui-react';
+import Logo from '../../Images/GoFarlogo.png';
+import LoginForm from '../../Components/LoginForm';
+import Navbar from '../../Components/Navbar';
+import LoginHeroImage from '../../Images/loginHeroImage.jpg';
 
+const LoginPage = () => {
+  return (
+    <>
+    <Container className="bg-image" style={{backgroundImage: `url(${LoginHeroImage})`}}>
+    <Navbar/>
+    <LoginForm/>
+    </Container>
+   
+    </>
+  )
+}
 
-
-const bgImage = 'https://unsplash.com/photos/nKg8IsVFMV8';
-
-const LoginForm = () => (
-<div className="bg-image">
-  <Grid textAlign='center' style={{ height: '100vh', backgroundImage: `url(${bgImage})`}} verticalAlign='middle'>
-    <Grid.Column style={{ maxWidth: 450 }}>
-      <Header as='h2' color='teal' textAlign='center'>
-        <Image src='/logo.png' /> GoFar Login
-      </Header>
-      <Form size='large'>
-        <Segment stacked>
-          <Form.Input fluid icon='user' iconPosition='left' placeholder='E-mail address' />
-          <Form.Input
-            fluid
-            icon='lock'
-            iconPosition='left'
-            placeholder='Password'
-            type='password'
-          />
-
-          <Button color='teal' fluid size='large'>
-            Login
-          </Button>
-        </Segment>
-      </Form>
-      <Message>
-        New to us? <a href='#'>Sign Up</a>
-      </Message>
-    </Grid.Column>
-  </Grid>
-</div>
-)
-
-export default LoginForm;
+export default LoginPage;
