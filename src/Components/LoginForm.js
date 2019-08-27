@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import Logo from '../Images/GoFarlogo.png'
 import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
 
@@ -19,7 +20,7 @@ const LoginForm = () => (
             type='password'
           />
 
-          <Button color='blue' fluid size='large'>
+          <Button as={Link} to="/" color='blue' fluid size='large'>
             Login
           </Button>
         </Segment>
