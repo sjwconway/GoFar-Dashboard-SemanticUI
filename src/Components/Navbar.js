@@ -12,7 +12,7 @@ const Navbar = () => (
     <Menu fixed='top' inverted>
       <Container>
         <Menu.Item as='a' header>
-          <Image size='mini' src={Logo} style={{ marginRight: '1.5em' }} />
+          <Image size='tiny' src={Logo} style={{ marginRight: '1.5em' }} />
         </Menu.Item>
         <Menu.Item as='a'>Home</Menu.Item>
 

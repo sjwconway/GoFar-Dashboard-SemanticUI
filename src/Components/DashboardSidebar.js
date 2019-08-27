@@ -29,8 +29,7 @@ export default class DashboardSidebar extends Component {
         <Button disabled={visible} onClick={this.handleShowClick}>
         <Icon name={icon} size='big'/>
         </Button>
-
-
+      
         <Sidebar.Pushable as={Segment}>
           <Sidebar
             as={Menu}
