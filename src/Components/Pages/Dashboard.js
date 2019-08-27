@@ -24,8 +24,9 @@ class Dashboard extends Component {
                  <BusinessTravelData/>
              </Card.Group>
             </div>
-
-            <ParkingLocationData/>
+            <div className="ui container">
+              <ParkingLocationData/>
+              </div>
             <div className="ui container">
               <Card.Group >
                 <AverageSpeedData/>
@@ -39,7 +40,10 @@ class Dashboard extends Component {
               <FuelEconomyData/>    
             </Card.Group>
             </div>
-            <AntdTable/> 
+            <div className="ui container">
+            <AntdTable/>
+            </div>
+             
         </>
         )
     }

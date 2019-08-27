@@ -85,6 +85,10 @@ body {
     width: 300px;
 }
 
+.ui.fluid.dropdown {
+    margin-bottom: 1vh;
+}
+
 /******* MEDIA BREAKPOINTS ******/
 
 @media only screen and (max-width: 1250px) {
