@@ -2,6 +2,7 @@ import React, { Component,} from 'react'
 import {Link} from 'react-router-dom';
 import CarDropDown from './Dropdown';
 import Dashboard from '../../src/Components/Pages/Dashboard';
+import LogoutModal from '../Components/LogoutModal';
 import {
   Button,
   Header,
@@ -43,7 +44,7 @@ export default class DashboardSidebar extends Component {
           >
             <Menu.Item as='a'>
               <Link to="/login">
-              <Icon name='home' />
+              <Icon name='home' size='large' /><br></br>
               Home
               </Link>
             </Menu.Item>
@@ -53,12 +54,7 @@ export default class DashboardSidebar extends Component {
               <CarDropDown/>
               <Button onClick={this.DisplayCarData} className="ui inverted primary basic button">Show Data</Button>
             </Menu.Item>
-            <Menu.Item as='a'>
-              <Link to="/login">
-              <Icon name='log out' />
-              Logout
-              </Link>
-            </Menu.Item>
+            <LogoutModal/>
           </Sidebar>
 
           <Sidebar.Pusher dimmed={visible}>
