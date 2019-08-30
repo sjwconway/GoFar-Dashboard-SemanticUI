@@ -3,12 +3,12 @@ import { Card, Image, Divider, Icon, Responsive} from 'semantic-ui-react';
 
 const LastFillUpData = () => {
 
-    const cardStyle = {
-        width: '100%'
-    }
+    // const cardStyle = {
+    //     width: '100%'
+    // }
     return (
-        <Responsive as={Card}>
-              <Card style={cardStyle} className="data-cards-r1" >
+        // <Responsive as={Card}>
+              <Card  className="data-cards-r1" >
             <Card.Content>
             <Icon float="left" circular inverted color="teal" name="battery high" size="big"/>
             <div className="data-content">
@@ -21,8 +21,8 @@ const LastFillUpData = () => {
                 <p>Last Location: Bondi Beach</p>
             </Card.Content>
             </Card.Content>
-        </Card>
-        </Responsive>
+         </Card>
+        // </Responsive>
       
     )
 }

@@ -15,22 +15,22 @@ import {
 
 export default class DashboardSidebar extends Component {
   state = { visible: false,
-            icon: 'arrow alternate circle right' }
+            icon: 'sidebar' }
 
   handleHideClick = () => this.setState({ visible: false})
   handleShowClick = () => this.setState({ visible: true, icon: '' })
-  handleSidebarHide = () => this.setState({ visible: false, icon: 'arrow alternate circle right'})
+  handleSidebarHide = () => this.setState({ visible: false, icon: 'sidebar'})
   DisplayCarData = () => this.setState({visible: false})
 
   render() {
     const { visible, icon } = this.state  
     return (
-      <div>
-        
-        <Button disabled={visible} onClick={this.handleShowClick}>
-        <Icon name={icon} size='big'/>
-        </Button>
-      
+        <>
+          <div className="navbar-bg">
+            <Button className="navbar-button" disabled={visible} onClick={this.handleShowClick}>
+            <Icon name={icon} color='red' size='big'/>
+            </Button>
+        </div>
         <Sidebar.Pushable as={Segment}>
           <Sidebar
             as={Menu}
@@ -51,17 +51,27 @@ export default class DashboardSidebar extends Component {
             <Menu.Item>
               <Icon name='car' size='massive' />
               Cars
+
               <CarDropDown/>
               <Button onClick={this.DisplayCarData} className="ui inverted primary basic button">Show Data</Button>
             </Menu.Item>
-            <LogoutModal/>
+            <LogoutModal hide={this.handleSidebarHide}/>
+            <Menu.Item >
+              <Button onClick={this.handleSidebarHide} className="ui inverted primary basic button">
+              <Icon name='arrow circle left' size='large'/>
+              Close Sidebar
+              </Button>
+              
+            </Menu.Item>
           </Sidebar>
 
           <Sidebar.Pusher dimmed={visible}>
               <Dashboard />
           </Sidebar.Pusher>
         </Sidebar.Pushable>
-      </div>
+     </>
+      
     )
   }
+
 }

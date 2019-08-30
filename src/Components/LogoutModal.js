@@ -1,28 +1,41 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import { Button, Header, Icon, Modal,Menu } from 'semantic-ui-react'
 
-const LogOutModal = () => (
-  <Modal trigger={ <Menu.Item as='a'>
-                    <Icon name='log out' />
-                    Logout
-                    </Menu.Item>} 
-                    basic size='small'>
-    <Header icon='log out' content='Are you sure?' />
-    <Modal.Content>
+class LogOutModal extends Component  {
+
+    
+  render() {
+    return (
+  <Modal 
+  trigger={ <Menu.Item  as='a'><Icon name='log out' />Logout</Menu.Item>}
+  header="Log Out"
+  content="Are you sure you want to log out?"
+  actions={['No', {  positive: true}]}
+  basic
+  >
+      
+      <Header icon='log out' content='  Log Out' />
+      <Modal.Content>
       <p>
-        Are you sure you want to log out?
+      Are you sure you want to log out?
       </p>
-    </Modal.Content>
-    <Modal.Actions>
-      <Button as='a' href="http://localhost:3000/" basic color='red' inverted>
-         No
+      </Modal.Content>
+      <Modal.Actions>
+      <Button onClick={this.props.hide} open={false}   basic color='red' inverted>
+      No
       </Button>
       <Button as={Link} to="/login" basic color='green' inverted>
-         Yes    
+      Yes    
       </Button>
-    </Modal.Actions>
-  </Modal>
-)
+      </Modal.Actions>
+      </Modal>
+    )
+  }
+}
+// const LogOutModal = () => (
+ 
+// )
 
 export default LogOutModal;
+
