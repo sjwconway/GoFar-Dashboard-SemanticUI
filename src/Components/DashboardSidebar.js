@@ -28,7 +28,7 @@ export default class DashboardSidebar extends Component {
         <>
           <div className="navbar-bg">
             <Button className="navbar-button" disabled={visible} onClick={this.handleShowClick}>
-            <Icon name={icon} color='red' size='big'/>
+            <Icon name={icon} style={{color: '#fff'}} size='big'/>
             </Button>
         </div>
         <Sidebar.Pushable as={Segment}>
@@ -42,35 +42,31 @@ export default class DashboardSidebar extends Component {
             visible={visible}
             width='thin'
           >
-            <Menu.Item as='a'>
-              <Link to="/login">
-              <Icon name='home' size='large' /><br></br>
-              Home
-              </Link>
+            <Menu.Item>
+              WELCOME USER!
             </Menu.Item>
             <Menu.Item>
               <Icon name='car' size='massive' />
               Cars
-
               <CarDropDown/>
               <Button onClick={this.DisplayCarData} className="ui inverted primary basic button">Show Data</Button>
             </Menu.Item>
-            <LogoutModal hide={this.handleSidebarHide}/>
             <Menu.Item >
-              <Button onClick={this.handleSidebarHide} className="ui inverted primary basic button">
+              <Button onClick={this.handleSidebarHide} className="ui inverted red basic button">
               <Icon name='arrow circle left' size='large'/>
               Close Sidebar
               </Button>
               
             </Menu.Item>
+            <LogoutModal hide={this.handleSidebarHide}/>
+           
           </Sidebar>
 
           <Sidebar.Pusher dimmed={visible}>
               <Dashboard />
           </Sidebar.Pusher>
         </Sidebar.Pushable>
-     </>
-      
+     </> 
     )
   }
 
