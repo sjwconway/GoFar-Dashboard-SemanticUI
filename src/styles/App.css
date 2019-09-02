@@ -15,6 +15,7 @@
 
 .hero-img.hero-img h1,h3 {
     color: rgba(255, 255, 255, 0.877);
+    padding: 1vh 0 0 1vh
 }
 
 .hero-img.hero-img h3 {

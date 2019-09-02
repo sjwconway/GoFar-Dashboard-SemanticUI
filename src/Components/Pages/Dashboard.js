@@ -4,7 +4,7 @@ import FuelLeftData from "../../Components/FuelLeft";
 import DiagnosticIssuesData from "../../Components/DiagnosticIssues";
 import BusinessTravelData from "../../Components/BusinessTravel";
 import ParkingLocation from "../../Components/ParkingLocation";
-import { Card, Statistic, Divider } from "semantic-ui-react";
+import { Card, Statistic, Divider, Header } from "semantic-ui-react";
 import ParkingLocationData from "../../Components/ParkingLocation";
 import AverageSpeedData from "../../Components/AverageSpeed";
 import TotalDistanceData from "../../Components/TotalDistance";
@@ -18,7 +18,7 @@ class Dashboard extends Component {
     return (
       <>
         <div className="hero-img">
-          <h1>Welcome User</h1>
+          <Header as='h1'>Welcome back Ken!</Header>
           <div className="hero-img-car-data">
             <h3>Honda Civic</h3>
             <Divider hidden />
