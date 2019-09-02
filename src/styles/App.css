@@ -1,3 +1,30 @@
+/********* DASHBOARD STYLES ********/
+
+.hero-img.hero-img {
+    height: 200px;
+    background:linear-gradient(0deg,rgba(41, 39, 41, 0.322),rgba(0, 0, 0, 0.466)), url('https://res.cloudinary.com/asheu321/image/upload/f_auto/bg-hero.jpg');
+
+}
+
+.ui.statistic>.value, .ui.statistics .statistic>.value {
+    color: #fff;
+}
+.ui.statistic>.label, .ui.statistics .statistic>.label {
+    color: gray;
+}
+
+.hero-img.hero-img h1,h3 {
+    color: rgba(255, 255, 255, 0.877);
+}
+
+.hero-img.hero-img h3 {
+    text-align: center;
+}
+
+.hero-img-car-data.hero-img-car-data  {
+    float: right;
+    margin-right: 4%;
+}
 .data-content h3 {
     margin: 0 auto;
 }
@@ -29,6 +56,8 @@ body {
 
 .ui.segment {
     margin: 0 auto;
+    border-radius: 0;
+    border: none;
 }
 
 .ui.container {
@@ -99,11 +128,11 @@ body {
 /********* NAVBAR STYLES *********/
 
 .navbar-bg {
-    background-color: #223344;
+    background-color: #0c1014;
 }
 
 .navbar-button {
-    background: #223344 !important;
+    background: #0c1014 !important;
 }
 
 /******* MEDIA BREAKPOINTS ******/
