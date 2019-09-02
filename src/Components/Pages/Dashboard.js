@@ -4,7 +4,7 @@ import FuelLeftData from "../../Components/FuelLeft";
 import DiagnosticIssuesData from "../../Components/DiagnosticIssues";
 import BusinessTravelData from "../../Components/BusinessTravel";
 import ParkingLocation from "../../Components/ParkingLocation";
-import { Card, Statistic, Divider, Header } from "semantic-ui-react";
+import { Card, Statistic, Divider, Header, Icon, List } from "semantic-ui-react";
 import ParkingLocationData from "../../Components/ParkingLocation";
 import AverageSpeedData from "../../Components/AverageSpeed";
 import TotalDistanceData from "../../Components/TotalDistance";
@@ -13,6 +13,7 @@ import EmissionsData from "../../Components/Emissions";
 import FuelEconomyData from "../../Components/FuelEconomy";
 import DataCard from "../DataCard";
 import AntdTable from "../../Components/Tables/AntdTables";
+import { Link } from 'react-router-dom';
 class Dashboard extends Component {
   render() {
     return (
@@ -64,6 +65,30 @@ class Dashboard extends Component {
         </div>
         <div className="ui container">
           <AntdTable />
+        </div>
+        <div className="footer-content">
+          <div className="media-content">
+            <a href='https://www.facebook.com/GoFarCar/' target='_blank'><Icon className="icon-color" size='big' name='facebook official'/></a>
+            <a href='https://twitter.com/gofarcar' target='_blank'><Icon size='big' className="icon-color"  name='twitter square'/></a>
+            <a href='https://www.youtube.com/c/GofarCar' target='_blank'><Icon size='big' className="icon-color"  name='youtube'/></a>
+            <a href='https://www.linkedin.com/company/gofar/' target='_blank'><Icon size='big' className="icon-color"  name='linkedin'/></a>
+          </div>
+          <div className="resources-content">
+            <List>
+              <List.Item as='a' href='https://www.gofar.co/features/' target='_blank'>Features</List.Item>
+              <List.Item as='a' href='https://www.gofar.co/about-us/' target='_blank'>About Us</List.Item>
+              <List.Item as='a'  href='https://www.gofar.co/fleets-government-corporations/' target='_blank'>Fleets,Governments,Coporations</List.Item>
+              <List.Item as='a' href='https://www.gofar.co/blog/' target='_blank'>Blog</List.Item>
+              <List.Item as='a' href='https://www.gofar.co/press-reviews/' target='_blank'>Press &#38; Reviews </List.Item>
+            </List>
+            <List>
+              <List.Item as='a' href='https://www.gofar.co/support/' target='_blank'>Support</List.Item>
+              <List.Item as='a' href='https://www.gofar.co/privacy-policy/' target='_blank'>Privacy Policy</List.Item>
+              <List.Item as='a'>Legal</List.Item>
+              <List.Item as='a'>Terms</List.Item>
+              <List.Item as='a'>Shipping &#38; Refund Policy</List.Item>
+            </List>
+          </div>
         </div>
       </>
     );

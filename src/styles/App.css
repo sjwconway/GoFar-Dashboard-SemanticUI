@@ -136,6 +136,40 @@ body {
     background: #0c1014 !important;
 }
 
+/********* FOOTER *********/
+.footer-content {
+    margin-top: 1vh;
+    height: 250px;
+    background-color: #0c1014 
+}
+
+
+.media-content {
+    display: flex;
+    position: relative; 
+    justify-content: center;
+    padding-top: 2%;
+    margin-bottom: 2vh;
+}
+.icon-color  {
+    color: rgba(255, 255, 255, 0.794) !important;
+    transition: all .2s ease-in-out;
+}
+
+
+
+.resources-content {
+    position: relative;
+    display: flex;
+   justify-content: space-evenly;
+}
+
+
+
+ .ui.list {
+    margin: 0;
+}
+
 /******* MEDIA BREAKPOINTS ******/
 
 @media only screen and (max-width: 1250px) {

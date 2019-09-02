@@ -18,7 +18,7 @@ const Navbar = () => (
               href="https://www.gofar.co/about-us/"
               target="_blank"
             >
-              About Us
+              About Us  
             </Dropdown.Item>
             <Dropdown.Item>Whatever</Dropdown.Item>
             <Dropdown.Divider />
