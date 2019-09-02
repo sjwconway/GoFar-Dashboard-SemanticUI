@@ -15,22 +15,22 @@ import {
 
 export default class DashboardSidebar extends Component {
   state = { visible: false,
-            icon: 'arrow alternate circle right' }
+            icon: 'sidebar' }
 
   handleHideClick = () => this.setState({ visible: false})
   handleShowClick = () => this.setState({ visible: true, icon: '' })
-  handleSidebarHide = () => this.setState({ visible: false, icon: 'arrow alternate circle right'})
+  handleSidebarHide = () => this.setState({ visible: false, icon: 'sidebar'})
   DisplayCarData = () => this.setState({visible: false})
 
   render() {
     const { visible, icon } = this.state  
     return (
-      <div>
-        
-        <Button disabled={visible} onClick={this.handleShowClick}>
-        <Icon name={icon} size='big'/>
-        </Button>
-      
+        <>
+          <div className="navbar-bg">
+            <Button className="navbar-button" disabled={visible} onClick={this.handleShowClick}>
+            <Icon name={icon} style={{color: '#fff'}} size='big'/>
+            </Button>
+        </div>
         <Sidebar.Pushable as={Segment}>
           <Sidebar
             as={Menu}
@@ -42,11 +42,8 @@ export default class DashboardSidebar extends Component {
             visible={visible}
             width='thin'
           >
-            <Menu.Item as='a'>
-              <Link to="/login">
-              <Icon name='home' size='large' /><br></br>
-              Home
-              </Link>
+            <Menu.Item>
+              WELCOME USER!
             </Menu.Item>
             <Menu.Item>
               <Icon name='car' size='massive' />
@@ -54,14 +51,23 @@ export default class DashboardSidebar extends Component {
               <CarDropDown/>
               <Button onClick={this.DisplayCarData} className="ui inverted primary basic button">Show Data</Button>
             </Menu.Item>
-            <LogoutModal/>
+            <Menu.Item >
+              <Button onClick={this.handleSidebarHide} className="ui inverted red basic button">
+              <Icon name='arrow circle left' size='large'/>
+              Close Sidebar
+              </Button>
+              
+            </Menu.Item>
+            <LogoutModal hide={this.handleSidebarHide}/>
+           
           </Sidebar>
 
           <Sidebar.Pusher dimmed={visible}>
               <Dashboard />
           </Sidebar.Pusher>
         </Sidebar.Pushable>
-      </div>
+     </> 
     )
   }
+
 }

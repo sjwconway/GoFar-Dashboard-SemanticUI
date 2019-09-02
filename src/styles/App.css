@@ -27,6 +27,10 @@ body {
     justify-content: center;
 }
 
+.ui.segment {
+    margin: 0 auto;
+}
+
 .ui.container {
     margin: 0 auto !important;
     width: 100%;
@@ -90,6 +94,16 @@ body {
 
 .ui.fluid.dropdown {
     margin-bottom: 1vh;
+}
+
+/********* NAVBAR STYLES *********/
+
+.navbar-bg {
+    background-color: #223344;
+}
+
+.navbar-button {
+    background: #223344 !important;
 }
 
 /******* MEDIA BREAKPOINTS ******/

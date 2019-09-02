@@ -11,6 +11,7 @@ import TotalDistanceData from '../../Components/TotalDistance';
 import TimeInCarData from '../../Components/TimeInCar';
 import EmissionsData from '../../Components/Emissions';
 import FuelEconomyData from '../../Components/FuelEconomy';
+import DataCard from '../DataCard';
 import AntdTable from '../../Components/Tables/AntdTables';
 class Dashboard extends Component {
     render() {
@@ -18,7 +19,7 @@ class Dashboard extends Component {
          <>
            <div className="ui container">   
              <Card.Group>
-               <LastFillUpData/>
+                 <LastFillUpData/>
                  <FuelLeftData/>
                  <DiagnosticIssuesData/>
                  <BusinessTravelData/>
