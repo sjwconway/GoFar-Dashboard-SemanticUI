@@ -1,11 +1,12 @@
-import React from 'react';
-import DashboardSidebar from '../../Components/DashboardSidebar';
+import React from "react";
 
 
 const HomePage = () => {
-    return (
-        <div><DashboardSidebar/></div>
-    )
-}
+  return (
+    <div>
+      hello
+    </div>
+  );
+};
 
 export default HomePage;
