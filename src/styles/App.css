@@ -156,7 +156,9 @@ body {
     transition: all .2s ease-in-out;
 }
 
-
+.icon-color :hover {
+    color: yellow;
+}
 
 .resources-content {
     position: relative;
