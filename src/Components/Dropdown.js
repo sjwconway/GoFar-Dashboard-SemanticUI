@@ -20,7 +20,7 @@ const carOptions = [
 ];
 
 const CarDropDown = () => (
-  <Dropdown placeholder="Select Car" fluid selection options={carOptions} />
+  <Dropdown className='dd-styles' placeholder="Select Car" fluid selection options={carOptions} />
 );
 
 export default CarDropDown;

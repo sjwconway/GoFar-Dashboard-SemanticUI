@@ -33,7 +33,7 @@ const LoginForm = () => (
             type="password"
           />
 
-          <Button as={Link} to="/" color="blue" fluid size="large">
+          <Button as={Link} to="/dashboard" color="blue" fluid size="large">
             Login
           </Button>
         </Segment>

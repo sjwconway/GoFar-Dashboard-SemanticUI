@@ -74,6 +74,7 @@ body {
 
 .ui.card, .ui.cards>.card {
     width: 20%;
+    box-shadow: 1px 5px 5px #bfbdb8;
 }
 
 .ui.placeholder.segment {
@@ -123,7 +124,8 @@ body {
 }
 
 .ui.fluid.dropdown {
-    margin-bottom: 1vh;
+        margin-bottom: 2vh;
+        margin-top: 1vh;
 }
 
 /********* NAVBAR STYLES *********/
@@ -136,11 +138,13 @@ body {
     background: #0c1014 !important;
 }
 
+
+
 /********* FOOTER *********/
 .footer-content {
     margin-top: 1vh;
     height: 250px;
-    background-color: #0c1014 
+    background-color:#007bff;
 }
 
 
@@ -167,7 +171,10 @@ body {
 }
 
 
-
+.ui.list>a.item {
+    cursor: pointer;
+    color: #fff;
+}
  .ui.list {
     margin: 0;
 }

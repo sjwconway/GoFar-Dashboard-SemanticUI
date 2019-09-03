@@ -13,7 +13,7 @@ const BusinessTravelData = () => {
         </div>
         <Card.Content extra></Card.Content>
       </Card.Content>
-      <hr></hr>
+
     </Card>
   );
 };

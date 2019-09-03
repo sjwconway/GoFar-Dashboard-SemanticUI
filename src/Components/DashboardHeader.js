@@ -11,8 +11,8 @@ const DashboardHeader = () => {
           <Divider hidden />
           <Statistic.Group size="mini">
             <Statistic>
-              <Statistic.Value>157</Statistic.Value>
-              <Statistic.Label>Trips </Statistic.Label>
+                <Statistic.Value>157</Statistic.Value>
+                <Statistic.Label>Trips </Statistic.Label>
             </Statistic>
             <Statistic>
               <Statistic.Value>35000 KM</Statistic.Value>
